@@ -118,7 +118,7 @@ var player = {
             break;           
             default: console.log("D E F A U L T ");  
         }
-        console.log("MovementCase:\nMove: "+move+"\nKeyCode: "+keyCode);
+        // console.log("MovementCase:\nMove: "+move+"\nKeyCode: "+keyCode);
     },
     
     
@@ -128,15 +128,16 @@ var player = {
     // |_|______________________________________|_|
     movePlayer : function(keyCode){
         // console.log("movePlayer:\nkeyCode: "+keyCode);
-        let movetKCList = [37,38,39,40,65,58,83,87];
+        let movetKCList = [37,38,39,40,58,65,68,83,87];
         if(movetKCList.includes(keyCode)){
             this.movementCase(keyCode);
             player.resetPlayerValues(); //actualiza los valores "top" y "left" dispuestos en el CSS para la seccion de #player
         }
+        // console.log(keyCode);
     },
 
     playerMovement : () => {
-        // console.log("playerMovement:\nKeyPressedCode: "+keyPressed);
+        // console.log("playerMovement:\nKeyPressedCode: "+keyPressed); 
         var keyPressed = this.event.which; //Global this para agarrar el evento del llamado en html
         player.movePlayer(keyPressed);
         player.attachTorchLightToPlayer(player.leftValue,player.topValue);

@@ -73,7 +73,27 @@ html{
     top:100px;
     left:450px;
 }
-/* @keyframes block{
-    0%{left:480px;}
-    100%{left:-40px;}
-} */
+
+
+
+.titleDiv{
+    position: relative;
+    text-align: center;
+
+    background-color: black ;
+
+    width: 500px;
+    height: 100px;
+    left: 250px;
+    top:50px;
+    color: white;
+}
+.titleDiv h1{
+    position: relative;
+    top:5px;
+}
+.titleDiv h1+p{
+    position: relative;
+    top:20px;
+
+}
