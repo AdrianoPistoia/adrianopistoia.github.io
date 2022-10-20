@@ -6,9 +6,12 @@ var intPropertyValue = (target,property) => {
 }
 
 function instantiateTorches(){
-    var aux = []
+    let aux = []
+    // let torch = ;
+
     for(i = 1;i<=13;i++){
         aux.push(document.getElementById("t"+i));
+        // document.getElementById("t"+i).classList.add("torch");
     }
     // console.log(aux)
     return aux;
@@ -91,25 +94,29 @@ var player = {
         let move = "";
         switch(keyCode){
             
-            case 100:        // RIGHT   || 100
-                move = player.leftValue + player.plWidth;//+"px";
-                player.domPlayerElement.style.left = this.checkStep(1) ? move+"px":player.leftValue+"px";
-                break;
-            case 97:        // LEFT    || 97
+            case 37:
+            case 65:        // LEFT    || 97 o 37
                 move = player.leftValue - player.plWidth;//+"px";
                 player.domPlayerElement.style.left = this.checkStep(-1) ? move+"px":player.leftValue+"px";
                 break;
-            case 119:        // UP      || 119
+            case 38:
+            case 87:        // UP      || 119 o 38
                 move = player.topValue - player.plHeight;//+"px";
                 player.domPlayerElement.style.top = this.checkStep(-26) ? move+"px":player.topValue+"px";
                 this.followPlayer(-this.plHeight);
                 break;
-            case 115:        // DOWN    || 115
+            case 39:
+            case 68:        // RIGHT   || 100 o ,39
+                move = player.leftValue + player.plWidth;//+"px";
+                player.domPlayerElement.style.left = this.checkStep(1) ? move+"px":player.leftValue+"px";
+                break;
+            case 40:
+            case 83:        // DOWN    || 115 ,40
                 move = player.topValue + player.plHeight;//+"px";
                 player.domPlayerElement.style.top = this.checkStep(26) ? move+"px":player.topValue+"px";
                 this.followPlayer(this.plHeight);
-            break;                           //     _       _
-            default: console.log("default"); //      \(-_-)/   SE ROMPIO TODO LPM
+            break;           
+            default: console.log("D E F A U L T ");  
         }
         console.log("MovementCase:\nMove: "+move+"\nKeyCode: "+keyCode);
     },
@@ -121,8 +128,11 @@ var player = {
     // |_|______________________________________|_|
     movePlayer : function(keyCode){
         // console.log("movePlayer:\nkeyCode: "+keyCode);
-        this.movementCase(keyCode);
-        player.resetPlayerValues(); //actualiza los valores "top" y "left" dispuestos en el CSS para la seccion de #player
+        let movetKCList = [37,38,39,40,65,58,83,87];
+        if(movetKCList.includes(keyCode)){
+            this.movementCase(keyCode);
+            player.resetPlayerValues(); //actualiza los valores "top" y "left" dispuestos en el CSS para la seccion de #player
+        }
     },
 
     playerMovement : () => {
