@@ -30,7 +30,7 @@ window.addEventListener("keydown", function(e) {
 }, false);
 // ____________________________________________
 // |!|--/--/--/--.OBJECT_LIST.--/--/--/--/--|!|
-var JSList      = [blockScr,main];  // main = siempre ultimo
+var JSList      = [main];  // main = siempre ultimo
 
 // ____________________________________________
 // |!|--/--/--/--/--/--/--/--/--/--/--/--/--|!|

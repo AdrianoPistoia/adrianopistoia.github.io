@@ -4,7 +4,9 @@ let playerDom = document.getElementById("player");
 var intPropertyValue = (target,property) => {
     return parseInt(window.getComputedStyle(target).getPropertyValue(property));
 }
-
+var floatPropertyValue = (target,property) => {
+    return parseFloat(window.getComputedStyle(target).getPropertyValue(property));
+}
 function instantiateTorches(){
     let aux = []
     // let torch = ;
@@ -57,24 +59,23 @@ var player = {
     },
     attachTorchLightToPlayer : function(playerPosX,playerPosY){
         // console.log("AttachTorchLightToPlayer");
-        moveThisLight(0 ,playerPosX+"px"    ,playerPosY-100+"px",checkLightPos(-52));     
+        moveThisLight(0 ,playerPosX+    "px"    ,playerPosY-100+    "px"    ,checkLightPos(-52));     
         
-        moveThisLight(3 ,playerPosX+50+"px" ,playerPosY-50+"px" ,checkLightPos(-25));
-        moveThisLight(1 ,playerPosX+"px"    ,playerPosY-50+"px" ,checkLightPos(-26));     
-        moveThisLight(2 ,playerPosX-50+"px" ,playerPosY-50+"px" ,checkLightPos(-27));
+        moveThisLight(3 ,playerPosX+50+ "px"    ,playerPosY-50+     "px"    ,checkLightPos(-25));
+        moveThisLight(1 ,playerPosX+    "px"    ,playerPosY-50+     "px"    ,checkLightPos(-26));     
+        moveThisLight(2 ,playerPosX-50+ "px"    ,playerPosY-50+     "px"    ,checkLightPos(-27));
     
-        moveThisLight(4 ,playerPosX-100+"px",playerPosY+"px"    ,checkLightPos(-2));
-        moveThisLight(5 ,playerPosX-50+"px" ,playerPosY+"px"    ,checkLightPos(-1));
-        moveThisLight(6 ,playerPosX+"px"    ,playerPosY+"px"    ,checkLightPos(0));
-        moveThisLight(7 ,playerPosX+50+"px" ,playerPosY+"px"    ,checkLightPos(1));
-        moveThisLight(8 ,playerPosX+100+"px",playerPosY+"px"    ,checkLightPos(2));
+        moveThisLight(4 ,playerPosX-100+"px"    ,playerPosY+        "px"    ,checkLightPos(-2));
+        moveThisLight(5 ,playerPosX-50+ "px"    ,playerPosY+        "px"    ,checkLightPos(-1));
+        moveThisLight(6 ,playerPosX+    "px"    ,playerPosY+        "px"    ,checkLightPos(0));
+        moveThisLight(7 ,playerPosX+50+ "px"    ,playerPosY+        "px"    ,checkLightPos(1));
+        moveThisLight(8 ,playerPosX+100+"px"    ,playerPosY+        "px"    ,checkLightPos(2));
     
-        moveThisLight(9 ,playerPosX-50+"px" ,playerPosY+50+"px" ,checkLightPos(25));
-        moveThisLight(10,playerPosX+"px"    ,playerPosY+50+"px" ,checkLightPos(26));
-        moveThisLight(11,playerPosX+50+"px" ,playerPosY+50+"px" ,checkLightPos(27));
+        moveThisLight(9 ,playerPosX-50+ "px"    ,playerPosY+50+     "px"    ,checkLightPos(25));
+        moveThisLight(10,playerPosX+    "px"    ,playerPosY+50+     "px"    ,checkLightPos(26));
+        moveThisLight(11,playerPosX+50+ "px"    ,playerPosY+50+     "px"    ,checkLightPos(27));
     
-        moveThisLight(12,playerPosX+"px"    ,playerPosY+100+"px",checkLightPos(52));
-
+        moveThisLight(12,playerPosX+    "px"    ,playerPosY+100+    "px"    ,checkLightPos(52));
     },
     checkStep : function(moveVal){
         let trueMoveVal = this.getPosPlayer() + moveVal;
@@ -102,8 +103,10 @@ var player = {
             case 38:
             case 87:        // UP      || 119 o 38
                 move = player.topValue - player.plHeight;//+"px";
-                player.domPlayerElement.style.top = this.checkStep(-26) ? move+"px":player.topValue+"px";
-                this.followPlayer(-this.plHeight);
+                if(this.checkStep(-26)){
+                    player.domPlayerElement.style.top = move+"px";
+                    this.followPlayer(-this.plHeight);
+                }
                 break;
             case 39:
             case 68:        // RIGHT   || 100 o ,39
@@ -113,8 +116,11 @@ var player = {
             case 40:
             case 83:        // DOWN    || 115 ,40
                 move = player.topValue + player.plHeight;//+"px";
-                player.domPlayerElement.style.top = this.checkStep(26) ? move+"px":player.topValue+"px";
-                this.followPlayer(this.plHeight);
+                if(this.checkStep(26)){
+                    player.domPlayerElement.style.top = move+"px";
+                    this.followPlayer(this.plHeight)
+                }
+                
             break;           
             default: console.log("D E F A U L T ");  
         }
@@ -144,3 +150,23 @@ var player = {
         // console.log("PlayerLeftVal: "+player.leftValue+"\nPlayerTopVal: "+player.topValue);
     }
 }
+
+
+$(document).ready(function (){
+    setInterval(function(){
+        var length = document.getElementsByClassName("torch").length;
+        let opValue = document.getElementById("t1").style.opacity ==0.5 ? 1: 0.5;
+        for(i = 1;i<=length;i++){ 
+            document.getElementById("t"+i).style.setProperty("opacity",opValue)
+        }
+        console.log(document.getElementById("t1").style.opacity);
+    },500);
+    // setInterval(function(){
+    //     for(i = 1;i<=length;i++){ 
+    //         document.getElementById("t"+i).style.setProperty("opacity",0.3)
+    //     }
+    //     console.log(document.getElementById("t1").style.opacity);
+    // },500);
+    // clearInterval();
+
+})
