@@ -3,7 +3,7 @@
     --main-color:       #557BFF;
     --secondary-color:  #FFA300; 
     --terciary-color:   #803C00;
-    --contrast-color:   #838383;
+    --contrast-color:   #1f1f1f;
     --font-color:       #CCB51D;
 }
 
@@ -34,16 +34,30 @@ html{
     background-image: url("../images/tileN5.jpg");
     visibility:     hidden;
     position:       absolute;
-    opacity:        0.3;
+    z-index:        3999999;
+    opacity:        0.6;
     height:         50px;
     width:          50px;
     left:           50px;
     top:            50px;
+}   
+.torchFar{
+    background-image: url("../images/tileN4.jpg");
+}
+#checkPoint1{
+    background-color: aquamarine;
+    position:       absolute;
+    z-index:        4000000;
+    height:         50px;
+    width:          50px;
+    left:           550px;
+    top:            300px;
 }
 #player{
     background-color: red;
     border-radius:  50% 50%;
     position:       relative;
+    z-index:        4000000;
     height:         50px;
     width:          50px;
     left:           1150px;
@@ -68,30 +82,56 @@ html{
     top:            -50px;
 }
 .Header img{
-    border-radius:  35%;
-    margin-left:    150px;
-    margin-top:     7px;
-    border:         3px solid rgb(0, 0, 0) ;
+    border-radius:  10%;
+    margin-left:    50px;
+    margin-top:     8px;
+    padding:        5px;
+    border:         1px solid white;
     height:         90%;
 }
 .Header img+div{
-    padding-left:   70px;
-    /* font-family:    "consola"; */
+    background-color: var(--contrast-color);
+    margin-bottom:  20px;
+    margin-left:    70px;
+    margin-top:     20px;
+    border:         1px solid white;
 }
 .Header div>h1{
     padding-bottom: 10px;
     letter-spacing: 2px;
     padding-top:    10px;
-    padding-left:   150px;
-    margin-left:    50px;
+    margin-left:    125px;
     align-self:     flex-start;
+}
+.Tuto{
+    background-color: var(--contrast-color);
+    margin-bottom:  20px;
+    padding-left:   25px;
+    padding-top:    25px;
+    margin-top:     20px;
+    position:       relative;
+    border:         1px solid white;
+    width:          275px;
+}
+.Tuto h2{
+    padding-left:   55px;
+    position:       relative;
+}
+.Tuto p{
+    position:       relative;
+    left:           95px;
+    top:            15px;
+}
+.Tuto p+p{
+    padding-top:    15px;
+    left:           35px;
 }
 .Header div>h1+ul{
     list-style-type:none;
     text-decoration:none;
     letter-spacing: 1px;
-    padding-left:   75px;
-    margin-left:    50px;
+    margin-right:   25px;
+    margin-left:    25px;
 }
 .Header div>h1+ul>li{
     padding-bottom: 15px;
@@ -105,6 +145,14 @@ html{
     width:          100%;
     top:            -50px;
 }
+/* #screen1{
+    position: absolute;
+    width: 1200px;
+    height: 650px;
+    background-color: black;
+    z-index: 1000;
+    top: 200px;
+} */
 .blockRight{
     background-color:black;
     font-size:      15px;
@@ -114,14 +162,21 @@ html{
     left:           50px;
     top:            150px;
 }
+.blockRight div{
+    background-color: var(--contrast-color);
+    padding-bottom: 10px;
+    border:         1px solid white;
+    margin:         10px 25px 10px 25px;
+}
 .blockRight h2{
+    padding-top:    10px;
     position:       relative;
     left:           175px;
 }
 .blockRight p{
-    padding-right:  25px;
-    padding-left:   25px;
-    padding-top:    20px;
+    padding-right:  15px;
+    padding-left:   15px;
+    padding-top:    15px;
 }
 .puertaDer{
     background-color: black;
@@ -141,16 +196,28 @@ html{
 }
 .Aptitudes{
     background-color: black;
-    padding-top:    50px;
+    padding-top:    25px;
     min-height:     500px;
     min-width:      500px;
     max-width:      500px;
     position:       relative;
     left:           0px;
 }
+.Aptitudes div{
+    background-color: var(--contrast-color);
+    padding-bottom: 25px;
+    margin-bottom:  25px;
+    padding-right:  25px;
+    padding-left:   25px;
+    margin-right:   25px;
+    padding-top:    25px;
+    margin-left:    25px;
+    border:         1px solid white;
+
+}
 .Aptitudes h2{
     position:       relative;
-    left:           175px;
+    left:           135px;
 }
 .boldenThis{
     font-weight:    bolder;
@@ -160,12 +227,10 @@ html{
     margin-top:     15px;
     color:          white;
 }
-.font14{
+/* .font14{
     font-size:      14px;
-}
+} */
 .Aptitudes p{
-    padding-right:  25px;
-    padding-left:   25px;
     padding-top:    20px;
 }
 .parte2{
@@ -177,7 +242,7 @@ html{
     position:       relative;
     height:         250px;
     width:          350px;
-    top:            -50px;
+    top:            50px;
 }
 .P2bloqueIzqDown{
     background-color: black;
@@ -185,7 +250,7 @@ html{
     height:         500px;
     width:          300px;
     left:           550px;
-    top:            -50px;
+    top:            50px;
 }
 
 
