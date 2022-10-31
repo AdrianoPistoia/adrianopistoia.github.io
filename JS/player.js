@@ -1,6 +1,8 @@
 // √ 	─
 let playerDom = document.getElementById("player");
-
+var rawPropertyValue = (target,property) => {
+    return window.getComputedStyle(target).getPropertyValue(property);
+}
 var intPropertyValue = (target,property) => {
     return parseInt(window.getComputedStyle(target).getPropertyValue(property));
 }
@@ -174,17 +176,22 @@ var player = {
 }
 
 function turnTorchOn (torchId){
-    let target = document.getElementById(torchId);
-    target.style.backgroundImage = "url('../icons/torch-stand-on.png')"    
+    let target1 = document.getElementById("checkPoint"+torchId);
+    target1.style.backgroundImage = "url('../icons/torch-stand-on.png')"
+    document.getElementById("screen"+torchId).style.animationName = "fade";
+    // document.getElementById("screen"+torchId)
+    // let screenTrans = rawPropertyValue(document.getElementById("screen1"),"background-color");
+    // console.log(screenTrans);
+    // while()    
 }
 
 let torch1 = document.getElementById("checkPoint1");
 let torch1Pos = (intPropertyValue(torch1,"left")/50) + (intPropertyValue(torch1,"top")/50*26)+27;
 
 $(document).keydown(function (){
-    console.log(player.getPosPlayer())
     let isPlayerOnTorch1 = torch1Pos == parseInt(player.getPosPlayer());  
-    console.log(torch1Pos);
-    if(isPlayerOnTorch1) turnTorchOn("checkPoint1");
-
+    if(isPlayerOnTorch1) {
+        turnTorchOn(1);
+        
+    }
 })
