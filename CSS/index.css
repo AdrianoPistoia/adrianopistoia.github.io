@@ -63,7 +63,7 @@ html{
     background-image: url("../images/tileN5.jpg");
     visibility:     hidden;
     position:       absolute;
-    z-index:        3999999;
+    z-index:        3999998;
     opacity:        0.6;
     height:         50px;
     width:          50px;
@@ -76,10 +76,10 @@ html{
 }
 
 #checkPoint1{
-    background-image: url("../icons/torch-snuffed.png");
+    background-image: url("../icons/torch-snuffed-stand.png");
     background-size: contain;
     position:       absolute;
-    z-index:        4000000;
+    z-index:        3999999;
     height:         50px;
     width:          50px;
     left:           500px;

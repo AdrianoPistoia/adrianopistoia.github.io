@@ -67,83 +67,48 @@ var player = {
         player.topValue    = intPropertyValue(player.domPlayerElement,"top");
     },
     attachTorchLightToPlayer : function(playerPosX,playerPosY){
-        // console.log("AttachTorchLightToPlayer");
+        moveThisLight(13,playerPosX-50+ "px"    ,playerPosY-150+    "px"    ,checkLightPos(-79));
+        moveThisLight(14,playerPosX+    "px"    ,playerPosY-150+    "px"    ,checkLightPos(-78));
+        moveThisLight(15,playerPosX+50+ "px"    ,playerPosY-150+    "px"    ,checkLightPos(-77));
+        moveThisLight(16,playerPosX-100+"px"    ,playerPosY-100+    "px"    ,checkLightPos(-54));
+        moveThisLight(17,playerPosX-50+ "px"    ,playerPosY-100+    "px"    ,checkLightPos(-53));
         moveThisLight(0 ,playerPosX+    "px"    ,playerPosY-100+    "px"    ,checkLightPos(-52));     
-        
-        moveThisLight(1 ,playerPosX+    "px"    ,playerPosY-50+     "px"    ,checkLightPos(-26));     
+        moveThisLight(18,playerPosX+50+ "px"    ,playerPosY-100+    "px"    ,checkLightPos(-51));
+        moveThisLight(19,playerPosX+100+"px"    ,playerPosY-100+    "px"    ,checkLightPos(-50));
+        moveThisLight(20,playerPosX-150+"px"    ,playerPosY-50+     "px"    ,checkLightPos(-29));
+        moveThisLight(21,playerPosX-100+"px"    ,playerPosY-50+     "px"    ,checkLightPos(-28));
         moveThisLight(2 ,playerPosX-50+ "px"    ,playerPosY-50+     "px"    ,checkLightPos(-27));
+        moveThisLight(1 ,playerPosX+    "px"    ,playerPosY-50+     "px"    ,checkLightPos(-26));     
         moveThisLight(3 ,playerPosX+50+ "px"    ,playerPosY-50+     "px"    ,checkLightPos(-25));
-    
+        moveThisLight(22,playerPosX+100+"px"    ,playerPosY-50+     "px"    ,checkLightPos(-24));
+        moveThisLight(23,playerPosX+150+"px"    ,playerPosY-50+     "px"    ,checkLightPos(-23));
+        moveThisLight(24,playerPosX-200+"px"    ,playerPosY+        "px"    ,checkLightPos(-4));
+        moveThisLight(25,playerPosX-150+"px"    ,playerPosY+        "px"    ,checkLightPos(-3));
         moveThisLight(4 ,playerPosX-100+"px"    ,playerPosY+        "px"    ,checkLightPos(-2));
         moveThisLight(5 ,playerPosX-50+ "px"    ,playerPosY+        "px"    ,checkLightPos(-1));
         moveThisLight(6 ,playerPosX+    "px"    ,playerPosY+        "px"    ,checkLightPos(0));
         moveThisLight(7 ,playerPosX+50+ "px"    ,playerPosY+        "px"    ,checkLightPos(1));
         moveThisLight(8 ,playerPosX+100+"px"    ,playerPosY+        "px"    ,checkLightPos(2));
-    
+        moveThisLight(26,playerPosX+150+"px"    ,playerPosY+        "px"    ,checkLightPos(3));
+        moveThisLight(27,playerPosX+200+"px"    ,playerPosY+        "px"    ,checkLightPos(4));
+        moveThisLight(28,playerPosX-150+"px"    ,playerPosY+50+     "px"    ,checkLightPos(23));
+        moveThisLight(29,playerPosX-100+"px"    ,playerPosY+50+     "px"    ,checkLightPos(24));
         moveThisLight(9 ,playerPosX-50+ "px"    ,playerPosY+50+     "px"    ,checkLightPos(25));
         moveThisLight(10,playerPosX+    "px"    ,playerPosY+50+     "px"    ,checkLightPos(26));
         moveThisLight(11,playerPosX+50+ "px"    ,playerPosY+50+     "px"    ,checkLightPos(27));
-    
-        moveThisLight(12,playerPosX+    "px"    ,playerPosY+100+    "px"    ,checkLightPos(52));
-
-        moveThisLight(13,playerPosX-50+ "px"    ,playerPosY-150+    "px"    ,checkLightPos(-79));
-        moveThisLight(14,playerPosX+    "px"    ,playerPosY-150+    "px"    ,checkLightPos(-78));
-        moveThisLight(15,playerPosX+50+ "px"    ,playerPosY-150+    "px"    ,checkLightPos(-77));
-
-        moveThisLight(16,playerPosX-100+"px"    ,playerPosY-100+    "px"    ,checkLightPos(-54));
-        moveThisLight(17,playerPosX-50+ "px"    ,playerPosY-100+    "px"    ,checkLightPos(-53));
-        moveThisLight(18,playerPosX+50+ "px"    ,playerPosY-100+    "px"    ,checkLightPos(-51));
-        moveThisLight(19,playerPosX+100+"px"    ,playerPosY-100+    "px"    ,checkLightPos(-50));
-
-        moveThisLight(20,playerPosX-150+"px"    ,playerPosY-50+     "px"    ,checkLightPos(-29));
-        moveThisLight(21,playerPosX-100+"px"    ,playerPosY-50+     "px"    ,checkLightPos(-28));
-        moveThisLight(22,playerPosX+100+"px"    ,playerPosY-50+     "px"    ,checkLightPos(-24));
-        moveThisLight(23,playerPosX+150+"px"    ,playerPosY-50+     "px"    ,checkLightPos(-23));
-
-        moveThisLight(24,playerPosX-200+"px"    ,playerPosY+        "px"    ,checkLightPos(-4));
-        moveThisLight(25,playerPosX-150+"px"    ,playerPosY+        "px"    ,checkLightPos(-3));
-        moveThisLight(26,playerPosX+150+"px"    ,playerPosY+        "px"    ,checkLightPos(3));
-        moveThisLight(27,playerPosX+200+"px"    ,playerPosY+        "px"    ,checkLightPos(4));
-
-        moveThisLight(28,playerPosX-150+"px"    ,playerPosY+50+     "px"    ,checkLightPos(23));
-        moveThisLight(29,playerPosX-100+"px"    ,playerPosY+50+     "px"    ,checkLightPos(24));
         moveThisLight(30,playerPosX+100+"px"    ,playerPosY+50+     "px"    ,checkLightPos(28));
         moveThisLight(31,playerPosX+150+"px"    ,playerPosY+50+     "px"    ,checkLightPos(29));
-
-        moveThisLight(32,playerPosX+100+"px"    ,playerPosY+100+    "px"    ,checkLightPos(54));
-        moveThisLight(33,playerPosX+50+ "px"    ,playerPosY+100+    "px"    ,checkLightPos(53));
-        moveThisLight(34,playerPosX-50+ "px"    ,playerPosY+100+    "px"    ,checkLightPos(51));
         moveThisLight(35,playerPosX-100+"px"    ,playerPosY+100+    "px"    ,checkLightPos(50));
-
-        moveThisLight(36,playerPosX-50+"px"    ,playerPosY+150+     "px"    ,checkLightPos(77));
-        moveThisLight(37,playerPosX+   "px"    ,playerPosY+150+     "px"    ,checkLightPos(78));
-        moveThisLight(38,playerPosX+50+"px"    ,playerPosY+150+     "px"    ,checkLightPos(79));
-        // moveThisLight(39,playerPosX+50+"px"    ,playerPosY+150+     "px"    ,checkLightPos(79));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        moveThisLight(34,playerPosX-50+ "px"    ,playerPosY+100+    "px"    ,checkLightPos(51));
+        moveThisLight(12,playerPosX+    "px"    ,playerPosY+100+    "px"    ,checkLightPos(52));
+        moveThisLight(33,playerPosX+50+ "px"    ,playerPosY+100+    "px"    ,checkLightPos(53));
+        moveThisLight(32,playerPosX+100+"px"    ,playerPosY+100+    "px"    ,checkLightPos(54));
+        moveThisLight(36,playerPosX-50+"px"     ,playerPosY+150+     "px"    ,checkLightPos(77));
+        moveThisLight(37,playerPosX+   "px"     ,playerPosY+150+     "px"    ,checkLightPos(78));
+        moveThisLight(38,playerPosX+50+"px"     ,playerPosY+150+     "px"    ,checkLightPos(79));
     },
     checkStep : function(moveVal){
         let trueMoveVal = this.getPosPlayer() + moveVal;
-        // console.log("checkStep:\nmoveVal: "+moveVal+"\ngridMapBoolVal: "+gridMap[trueMoveVal])
         return gridMap[trueMoveVal];
     },
 
@@ -152,13 +117,11 @@ var player = {
         if(playerScreenPosY>=300 && playerScreenPosY <= (2800-300)){
             scrollBy(0,val);                                            //if the player body is at the middle of the screen or further, then follow him down
         }
-        // console.log("followPlayer")
     },
 
     movementCase : function(keyCode){
         let move = "";
         switch(keyCode){
-            
             case 37:
             case 65:        // LEFT    || 97 o 37
                 move = player.leftValue - player.plWidth;//+"px";
@@ -188,7 +151,6 @@ var player = {
             break;           
             default: console.log("D E F A U L T ");  
         }
-        // console.log("MovementCase:\nMove: "+move+"\nKeyCode: "+keyCode);
     },
     
     
@@ -197,40 +159,32 @@ var player = {
     // |!|_______FUNCIONES_PRINCIPALES__________|!|
     // |_|______________________________________|_|
     movePlayer : function(keyCode){
-        // console.log("movePlayer:\nkeyCode: "+keyCode);
         let movetKCList = [37,38,39,40,58,65,68,83,87];
         if(movetKCList.includes(keyCode)){
             this.movementCase(keyCode);
             player.resetPlayerValues(); //actualiza los valores "top" y "left" dispuestos en el CSS para la seccion de #player
         }
-        // console.log(keyCode);
     },
 
     playerMovement : () => {
-        // console.log("playerMovement:\nKeyPressedCode: "+keyPressed); 
         var keyPressed = this.event.which; //Global this para agarrar el evento del llamado en html
         player.movePlayer(keyPressed);
         player.attachTorchLightToPlayer(player.leftValue,player.topValue);
-        // console.log("PlayerLeftVal: "+player.leftValue+"\nPlayerTopVal: "+player.topValue);
     }
 }
 
+function turnTorchOn (torchId){
+    let target = document.getElementById(torchId);
+    target.style.backgroundImage = "url('../icons/torch-stand-on.png')"    
+}
 
-$(document).ready(function (){
-    // setInterval(function(){
-    //     var length = document.getElementsByClassName("torch").length;
-    //     let opValue = document.getElementById("t1").style.opacity ==0.5 ? 1: 0.5;
-    //     for(i = 1;i<=length;i++){ 
-    //         document.getElementById("t"+i).style.setProperty("opacity",opValue)
-    //     }
-    //     console.log(document.getElementById("t1").style.opacity);
-    // },500);
-    // setInterval(function(){
-    //     for(i = 1;i<=length;i++){ 
-    //         document.getElementById("t"+i).style.setProperty("opacity",0.3)
-    //     }
-    //     console.log(document.getElementById("t1").style.opacity);
-    // },500);
-    // clearInterval();
+let torch1 = document.getElementById("checkPoint1");
+let torch1Pos = (intPropertyValue(torch1,"left")/50) + (intPropertyValue(torch1,"top")/50*26)+27;
+
+$(document).keydown(function (){
+    console.log(player.getPosPlayer())
+    let isPlayerOnTorch1 = torch1Pos == parseInt(player.getPosPlayer());  
+    console.log(torch1Pos);
+    if(isPlayerOnTorch1) turnTorchOn("checkPoint1");
 
 })
