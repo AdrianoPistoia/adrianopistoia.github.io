@@ -1,11 +1,13 @@
 
 :root{
-    --main-color:       #2598e4;
-    --secondary-color:  #FFA300;
-    --terciary-color:   #803C00;
-    --contrast-color:   #1f1f1f;
-    --font-color:       #CCB51D;
+    --secondary-color:      #FFA300;
+    --contrast-color:       #1f1f1f;
+    --terciary-color:       #803C00;
+    --main-color:           #25d7e4;
+    --font-color:           #CCB51D;
 }
+
+
 
 *{
     padding:            0px;
@@ -20,8 +22,9 @@ p{
 }
 
 h1,h2,h3,p,a,li{
+    letter-spacing:     3px;
     font-family:        "dragon";
-    color:              white;
+    color:              rgb(215, 236, 255);
 }
 
 @font-face {
@@ -43,14 +46,23 @@ html{
 }
 
 .iconContainer{
-    padding-bottom:     5px;
+    justify-content:    flex-start;
+    padding-bottom:     2px;
     align-items:        center;
     display:            flex;
 }
 .icon{
+    background-repeat:  no-repeat;
     background-size:    contain;
     height:             50px;
     width:              50px;
+}
+.mini{
+    /* padding-right:  20px; */
+    position:       relative;
+    height:         30px;
+    width:          30px;
+    /* left:           -65px; */
 }
 .learning{
     background-image:   url("../icons/read.png");
@@ -87,7 +99,9 @@ html{
 }
 
 #player{
-    background-color: red;
+    background-repeat:  no-repeat;
+    background-image:   url("../icons/warrior.png");
+    background-position: 5px;
     border-radius:      50% 50%;
     position:           relative;
     z-index:            4000000;
@@ -143,7 +157,7 @@ html{
 
 .Header div>h1{
     padding-bottom:     10px;
-    letter-spacing:     2px;
+    /* letter-spacing:     2px; */
     padding-top:        10px;
     margin-left:        20px;
     align-self:         flex-start;
@@ -161,26 +175,50 @@ html{
     width:              300px;
 }
 
-.Tuto h2{
-    padding-left:       55px;
+.Tuto div>div+h2{
+    padding-left:       20px;
     position:           relative;
+}
+
+.teacher{
+    background-image:   url("../icons/teacher.png");
+}
+
+.Comunicator{
+    background-image:   url("../icons/public-speaker.png");
+}
+
+.FastLearner{
+    background-image:   url("../icons/read.png");
+}
+.Creativity{
+    background-image:   url("../icons/team-idea.png");
+}
+.Team{
+    background-image:   url("../icons/three-friends.png");
+}
+
+.Movement{
+    background-image:   url("../icons/keyboard.png");
+}
+
+.biceps{
+    background-image:   url("../icons/biceps.png");
 }
 
 .Tuto p{
     position:           relative;
-    left:               85px;
-    top:                15px;
+    left:               75px;
 }
 
 .Tuto p+p{
-    padding-top:        15px;
-    left:               25px;
+    padding-top:        10px;
+    left:               5px;
 }
 
 .Header div>div+ul{
     list-style-type:    none;
     text-decoration:    none;
-    letter-spacing:     1px;
     margin-right:       25px;
     margin-left:        25px;
 }
@@ -205,7 +243,7 @@ html{
     background-color: rgba(0,0,0,1);
     position:           absolute;
     display:            block;
-    height:             900px;
+    height:             1000px;
     width:              1200px;
     top:                200px;
 }
@@ -226,13 +264,13 @@ html{
     background-color:   var(--contrast-color);
     padding-bottom:     15px;
     margin-bottom:      35px;
-    padding-right:      40px;
+    padding-right:      45px;
     margin-right:       25px;
-    padding-left:       40px;
+    padding-left:       85px;
     padding-top:        10px;
     margin-left:        25px;
     margin-top:         20px;
-    text-align:         center;
+    /* text-align:         center; */
     border:             1px solid white;
 }
 
@@ -240,18 +278,19 @@ html{
     text-decoration-thickness:  2px;
     text-decoration:            underline;
     padding-bottom:             20px;
+    padding-left:               45px;
     padding-top:                20px;
     position:                   relative;
 }
 
 .blockRight h3{
+    padding-bottom:     10px;
     padding-top:        15px;
 }
 
+
 .special{
     padding-bottom:     5px;
-    letter-spacing:     1px;
-    word-spacing:       1pt;
     padding-top:        16px;
 
 }
@@ -269,7 +308,7 @@ html{
     height:             50px;
     width:              50px;
     left:               0px;
-    top:                850px;
+    top:                950px;
 }
 
 .puertaIzq{
@@ -278,7 +317,7 @@ html{
     height:             50px;
     width:              50px;
     left:               50px;
-    top:                850px;
+    top:                950px;
 }
 
 .Aptitudes{
@@ -287,11 +326,11 @@ html{
     min-width:          500px;
     max-width:          500px;
     position:           relative;
-    height:             880px;
+    height:             980px;
     left:               0px;
 }
 
-.Aptitudes div{
+.Aptitudes div.box{
     background-color:       var(--contrast-color);
     padding-bottom:         17px;
     margin-bottom:          5px;
@@ -300,15 +339,23 @@ html{
     margin-right:           25px;
     padding-top:            25px;
     margin-left:            25px;
-    text-align:             center;
     border:                 1px solid white;
 }
 
+.Aptitudes div.iconContainer.h2{
+    position:               relative;     
+    left:                   50px;
+}
+.Aptitudes div.iconContainer.h3>h3{
+    position:               relative;     
+    left:                   10px;
+}
 .Aptitudes h2{
     text-decoration-thickness:  2px;
     text-decoration:            underline;
     padding-bottom:             20px;
     position:                   relative;
+    left: 15px;
 }
 
 .Aptitudes h3{
@@ -345,3 +392,6 @@ p>span.boldenThis {
     left:               550px;
     top:                50px;
 }
+/* .thatColor{
+    color:              var(--secondary-color);
+} */
