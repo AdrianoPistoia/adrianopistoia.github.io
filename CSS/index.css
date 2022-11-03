@@ -255,6 +255,7 @@ html{
 .blockRight{
     background-color:   black;
     position:           relative;
+    height:             850px;
     width:              550px;
     left:               50px;
     top:                150px;
@@ -278,12 +279,12 @@ html{
     background-color:   var(--contrast-color);
 }
 .nube{
-    background-position-y:  -100px;
+    background-position-y:  -114px;
     background-repeat:      no-repeat;
     background-image:       url("../images/nube.png");
     background-size:        cover;
     position:               absolute;
-    height:                 601px;
+    height:                 590px;
     width:                  501px;
     left:                   25px;
     top:                    283px;
@@ -356,9 +357,9 @@ html{
     padding-bottom:         17px;
     margin-bottom:          5px;
     padding-right:          40px;
-    padding-left:           40px;
+    padding-left:           45px;
     margin-right:           25px;
-    padding-top:            25px;
+    padding-top:            15px;
     margin-left:            25px;
     border:                 1px solid white;
 }
