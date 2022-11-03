@@ -269,10 +269,13 @@ html{
     padding-top:        10px;
     margin-left:        25px;
     margin-top:         20px;
-}
-.blockRight :not(.MineroGif):not(.nube){   
-    background-color:   var(--contrast-color);
     border:             1px solid white;
+}
+.stopBorders{
+    background-color:   var(--contrast-color);
+}
+.blockRight :not(.MineroGif):not(.nube):not(.stopBorders){   
+    background-color:   var(--contrast-color);
 }
 .nube{
     background-position-y:  -100px;
@@ -312,11 +315,12 @@ html{
 }
 
 .MineroGif{
-    background-repeat:  no-repeat;
-    background-image:   url("../images/MineroGif.gif");
-    background-size:    cover;
-    height:             500px;
-    width:              369px;
+    background-position-x:  -130px;
+    background-repeat:      no-repeat;
+    background-image:       url("../images/MineroGif.gif");
+    background-size:        cover;
+    height:                 500px;
+    width:                  369px;
 }
 
 .puertaDer{
