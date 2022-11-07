@@ -7,8 +7,6 @@
     --font-color:           #CCB51D;
 }
 
-
-
 *{
     padding:            0px;
     margin:             0px;
@@ -51,18 +49,23 @@ html{
     align-items:        center;
     display:            flex;
 }
+
 .icon{
     background-repeat:  no-repeat;
+    background-color:   rgba(0,0,0,0);
     background-size:    contain;
     height:             50px;
     width:              50px;
 }
+.big{
+    height:             75px;
+    width:              75px;
+
+}
 .mini{
-    /* padding-right:  20px; */
-    position:       relative;
-    height:         30px;
-    width:          30px;
-    /* left:           -65px; */
+    position:           relative;
+    height:             30px;
+    width:              30px;
 }
 .learning{
     background-image:   url("../icons/read.png");
@@ -99,16 +102,16 @@ html{
 }
 
 #player{
-    background-repeat:  no-repeat;
-    background-image:   url("../icons/warrior.png");
-    background-position: 5px;
-    border-radius:      50% 50%;
-    position:           relative;
-    z-index:            4000000;
-    height:             50px;
-    width:              50px;
-    left:               1150px;
-    top:                250px;
+    background-position:    5px;
+    background-repeat:      no-repeat;
+    background-image:       url("../icons/warrior.png");
+    border-radius:          50% 50%;
+    position:               relative;
+    z-index:                4000000;
+    height:                 50px;
+    width:                  50px;
+    left:                   1150px;
+    top:                    250px;
 }
 
 #block{
@@ -157,7 +160,6 @@ html{
 
 .Header div>h1{
     padding-bottom:     10px;
-    /* letter-spacing:     2px; */
     padding-top:        10px;
     margin-left:        20px;
     align-self:         flex-start;
@@ -181,31 +183,96 @@ html{
 }
 
 .teacher{
-    background-image:   url("../icons/teacher.png");
+    background-image:       url("../icons/teacher.png");
 }
-
 .Comunicator{
-    background-image:   url("../icons/public-speaker.png");
+    background-image:       url("../icons/public-speaker.png");
 }
-
 .FastLearner{
-    background-image:   url("../icons/read.png");
+    background-image:       url("../icons/read.png");
 }
 .Creativity{
-    background-image:   url("../icons/team-idea.png");
+    background-image:       url("../icons/team-idea.png");
 }
 .Team{
-    background-image:   url("../icons/three-friends.png");
+    background-image:       url("../icons/three-friends.png");
 }
-
 .Movement{
-    background-image:   url("../icons/keyboard.png");
+    background-image:       url("../icons/keyboard.png");
 }
-
 .biceps{
-    background-image:   url("../icons/biceps.png");
+    background-image:       url("../icons/biceps.png");
 }
-
+.HTML{
+    background-position-x:  7px;
+    background-image:       url("../icons/HTML-ico.png");
+}
+.CSS{
+    background-position-x:  7px;
+    background-image:       url("../icons/CSS-ico.png");
+}
+.JS{
+    background-position-x:  7px;
+    background-image:       url("../icons/JS-ico.png");
+}
+.Cpp{
+    background-image:       url("../icons/CIcon.png");
+}
+.CS{
+    background-image:       url("../icons/CSIcon.png");
+}
+.Java{
+    background-image:       url("../icons/JavaIcon.png");
+}
+.TSQL{
+    background-position-x:  7px;
+    background-image:       url("../icons/Base.png");
+}
+.MySQL{
+    background-position-x:  7px;
+    background-image:       url("../icons/MySQLIco.png");
+}
+.MDB{
+    background-position-x:  7px;
+    background-image:       url("../icons/MDBIco.png");
+}   
+.ESP{
+    background-image:       url("../icons/Spain.png");
+}
+.ENG{
+    background-image:       url("../icons/England.png");
+}
+.JPN{
+    background-image:       url("../icons/Japan.png");
+}
+.blockRight div.iconContainer{
+    margin-bottom:      5px;
+    padding:            0px !important;
+    /* margin:             0px !important; */
+}
+/* .blockRight .icon{
+    padding-left:       20px;
+}
+div.icon.stopBorders{
+    padding-left: 10px;
+} */
+div.icon.stopBorders>h3{
+    margin-left:        30px;
+}
+div.row{
+    justify-content:    space-between;
+    padding-right:      50px;
+    display:            flex;
+    width:              400px;
+}
+div.row>div.icon{
+    align-items:        end;
+    display:            flex;
+}
+div.row h3{
+    position:           relative;
+    left:               25px;
+}
 .Tuto p{
     position:           relative;
     left:               75px;
@@ -237,15 +304,15 @@ html{
 }
 
 #screen1{
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    animation-duration: 1s;
-    background-color: rgba(0,0,0,1);
-    position:           absolute;
-    display:            block;
-    height:             1000px;
-    width:              1200px;
-    top:                200px;
+    animation-iteration-count:  1;
+    animation-fill-mode:        forwards;
+    animation-duration:         1s;
+    background-color:       rgba(0,0,0,1);
+    position:                   absolute;
+    display:                    block;
+    height:                     1000px;
+    width:                      1200px;
+    top:                        200px;
 }
 @keyframes fade {
     from{background-color:  rgba(0,0,0,1)}
@@ -261,12 +328,12 @@ html{
     top:                150px;
 }
 
-.blockRight div{
+.blockRight div:not(.icon){
     padding-bottom:     15px;
     margin-bottom:      35px;
     padding-right:      45px;
     margin-right:       25px;
-    padding-left:       85px;
+    padding-left:       45px;
     padding-top:        10px;
     margin-left:        25px;
     margin-top:         20px;
@@ -274,8 +341,9 @@ html{
 }
 .stopBorders{
     background-color:   var(--contrast-color);
+    border:             none !important;
 }
-.blockRight :not(.MineroGif):not(.nube):not(.stopBorders){   
+.blockRight :not(.MineroGif):not(.nube):not(.stopBorders){
     background-color:   var(--contrast-color);
 }
 .nube{
@@ -293,7 +361,7 @@ html{
     text-decoration-thickness:  2px;
     text-decoration:            underline;
     padding-bottom:             20px;
-    padding-left:               45px;
+    padding-left:               85px;
     padding-top:                20px;
     position:                   relative;
 }
@@ -365,11 +433,11 @@ html{
 }
 
 .Aptitudes div.iconContainer.h2{
-    position:               relative;     
+    position:               relative;
     left:                   50px;
 }
 .Aptitudes div.iconContainer.h3>h3{
-    position:               relative;     
+    position:               relative;
     left:                   10px;
 }
 .Aptitudes h2{
@@ -386,16 +454,25 @@ html{
 }
 
 .boldenThis{
-    font-weight:    bolder;
-    color:          var(--main-color);
+    font-weight:        bolder;
+    color:              var(--main-color);
 }
 p>span.boldenThis {
-    font-weight:    bolder;
-    color:          var(--secondary-color);
+    font-weight:        bolder;
+    color:              var(--secondary-color);
 }
+
+.Qualities{
+    height:             350px;
+    width:              400px;
+}
+.Qualities h2{
+    margin-left:        35px;
+}
+
 .parte2{
-    display:        flex;
-    height:         450px;
+    display:            flex;
+    height:             450px;
 }
 
 .P2bloqueIzqUp{

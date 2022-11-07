@@ -204,3 +204,5 @@ function isPlayerNearTorch(idTorch){
 $(document).keydown(function (){
     if(isPlayerNearTorch(1))  turnOnTorchNumber(1);
 })
+
+
