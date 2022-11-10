@@ -203,6 +203,12 @@ function isPlayerNearTorch(idTorch){
 
 $(document).keydown(function (){
     if(isPlayerNearTorch(1))  turnOnTorchNumber(1);
+    if(isPlayerNearTorch(2))  turnOnTorchNumber(2);
+    if(isPlayerNearTorch(3)){
+        turnOnTorchNumber(3);
+        document.getElementById("screen4").style.animationName = "fade";
+    }  
+        
 })
 
 
