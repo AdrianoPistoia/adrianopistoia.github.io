@@ -213,8 +213,8 @@ $(document).keydown(function (){
     if(isPlayerNearTorch(3)){
         turnOnTorchNumber(3);
         document.getElementById("screen3").style.zIndex = -5000;
-        document.getElementById("screen4").style.zIndex = -5000;
         document.getElementById("screen4").style.animationName = "fade";
+        document.getElementById("screen4").style.zIndex = -5000;
     }  
         
 })
