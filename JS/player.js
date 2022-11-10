@@ -218,14 +218,14 @@ function toggleGrid(){
     if( stringPropertyValue(document.getElementsByClassName("grid")[1],"display")=="block"){
         for(let i = 0;i<=document.getElementsByClassName("grid").length;i++){
             document.getElementsByClassName("grid")[i].style.display = "none";
-            document.getElementById("toggleMsg").textContent = "Grilla:OFF";
+            document.getElementById("toggleMsg").textContent = "Grid:OFF";
             document.getElementById("toggle").style.backgroundColor = "green"
             
         }      
     }else{
         for(let i = 0;i<=document.getElementsByClassName("grid").length;i++){
             document.getElementsByClassName("grid")[i].style.display = "block";
-            document.getElementById("toggleMsg").textContent = "Grilla:ON"
+            document.getElementById("toggleMsg").textContent = "Grid:ON"
             document.getElementById("toggle").style.backgroundColor = "red"
         }
     }
