@@ -348,6 +348,189 @@ div.row h3{
     font-weight:                    bolder;
     font-size:                      medium;
 }
+.R1{
+    position:                       absolute;
+    left:                           0px;
+    top:                            25px
+}
+.R2{
+    position:                       absolute;
+    left:                           0px;
+    top:                            225px
+}
+.R3{
+    position:                       absolute;
+    left:                           0px;
+    top:                            375px
+}
+.R4{
+    position:                       absolute;
+    left:                           0px;
+    top:                            525px;
+}
+.R5{
+    position:                       absolute;
+    left:                           0px;
+    top:                            725px;
+}
+.R6{
+    position:                       absolute;
+    left:                           0px;
+    top:                            875px;
+}
+.R7{
+    position:                       absolute;
+    left:                           0px;
+    top:                            1025px;
+}
+.R8{
+    position:                       absolute;
+    left:                           0px;
+    top:                            1225px;
+}
+.R9{
+    position:                       absolute;
+    left:                           0px;
+    top:                            1375px;
+}
+.R10{
+    position:                       absolute;
+    left:                           0px;
+    top:                            1525px;
+}
+.R11{
+    position:                       absolute;
+    left:                           0px;
+    top:                            1725px;
+}
+.R12{
+    position:                       absolute;
+    left:                           0px;
+    top:                            1875px;
+}
+.R13{
+    position:                       absolute;
+    left:                           0px;
+    top:                            2025px;
+}
+.R14{
+    position:                       absolute;
+    left:                           0px;
+    top:                            2225px;
+}
+.R15{
+    position:                       absolute;
+    left:                           0px;
+    top:                            2375px
+}
+.R16{
+    position:                       absolute;
+    left:                           0px;
+    top:                            2525px;
+}
+.R17{
+    position:                       absolute;
+    left:                           0px;
+    top:                            2725px;
+}
+.L1{
+    position:                       absolute;
+    left:                           25px;
+    top:                            0px;
+}
+.L2{
+    position:                       absolute;
+    left:                           125px;
+    top:                            0px;
+}
+.L3{
+    position:                       absolute;
+    left:                           225px;
+    top:                            0px;
+}
+.L4{
+    position:                       absolute;
+    left:                           325px;
+    top:                            0px;
+}
+.L5{
+    position:                       absolute;
+    left:                           425px;
+    top:                            0px;
+}
+.L6{
+    position:                       absolute;
+    left:                           525px;
+    top:                            0px;
+}
+.L7{
+    position:                       absolute;
+    left:                           625px;
+    top:                            0px;
+}
+.L8{
+    position:                       absolute;
+    left:                           725px;
+    top:                            0px;
+}
+.L9{
+    position:                       absolute;
+    left:                           825px;
+    top:                            0px;
+}
+.L10{
+    position:                       absolute;
+    left:                           925px;
+    top:                            0px;
+}
+.L11{
+    position:                       absolute;
+    left:                           1025px;
+    top:                            0px;
+}
+.L12{
+    position:                       absolute;
+    left:                           1125px;
+    top:                            0px;
+}
+.gridRow{
+    display: none;
+    background-color:               rgba(255,0,0,0.3);
+    height:                         150px;
+    width:                          1200px;
+}
+.lastGridRow{
+    height: 75px    !important;
+}
+.gridRow2{
+    display: none;
+    background-color:               rgba(255,0,0,0.3);
+    height:                         100px;
+    width:                          1200px;
+}
+.gridCol{
+    display: none;
+    background-color:               rgba(255,0,0,0.3);
+    height:                         2800px;
+    width:                          50px;
+}
+.colorBlack{
+    padding-left:                   5px;
+    font-weight:                    bolder;
+    font-size:                      x-small     !important;
+    color:                          black;
+}
+.AbsButton{
+    background-color:               green;
+    align-items:                    center;
+    position:                       fixed;
+    display:                        flex;
+    height:                         50px;
+    cursor:                         pointer;
+    width:                          95px;
+    right:                          0px;
+    top:                            250px;
+}
 .part1{
     position:                       relative;
     display:                        flex;

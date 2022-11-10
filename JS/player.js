@@ -9,11 +9,12 @@ var rawPropertyValue = (target,property) => {
 var intPropertyValue = (target,property) => {
     return parseInt(window.getComputedStyle(target).getPropertyValue(property));
 }
+var stringPropertyValue = (target,property) => {
+    return window.getComputedStyle(target).getPropertyValue(property).toString();
+}
 var floatPropertyValue = (target,property) => {
     return parseFloat(window.getComputedStyle(target).getPropertyValue(property));
 }
-
-
 function instantiateTorches(){
     let aux = [];
     for(i = 1;i<=13;i++){
@@ -66,7 +67,7 @@ var player = {
     // |!|______________FUNCTIONS_______________|!|
     // |_|______________________________________|_|
 
-    getPosPlayer(){ return (this.leftValue/50) + (this.topValue/50*26)+27; },
+    getPosPlayer(){ return (this.leftValue/50) + (this.topValue/50*26)+27;},
 
     resetPlayerValues : function() {
         // console.log("ResetPlayerValues");
@@ -118,14 +119,12 @@ var player = {
         let trueMoveVal = this.getPosPlayer() + moveVal;
         return gridMap[trueMoveVal];
     },
-
     followPlayer : function (val){
         let playerScreenPosY = player.topValue + player.plHeight;
         if(playerScreenPosY>=300 && playerScreenPosY <= (2800-300)){
             scrollBy(0,val);                                            //if the player body is at the middle of the screen or further, then follow him down
         }
     },
-
     movementCase : function(keyCode){
         let move = "";
         switch(keyCode){
@@ -172,7 +171,6 @@ var player = {
             player.resetPlayerValues(); //actualiza los valores "top" y "left" dispuestos en el CSS para la seccion de #player
         }
     },
-
     playerMovement : () => {
         var keyPressed = this.event.which; //Global this para agarrar el evento del llamado en html
         player.movePlayer(keyPressed);
@@ -185,8 +183,6 @@ function turnOnTorchNumber (torchId){
     target1.style.backgroundImage = "url('../icons/torch-stand-on.png')"
     document.getElementById("screen"+torchId).style.animationName = "fade";
 }
-
-// let torch1 = document.getElementById("checkPoint1");
 
 function isPlayerNearTorch(idTorch){
     let target = document.getElementById("checkPoint"+idTorch);
@@ -217,6 +213,21 @@ $(document).keydown(function (){
         document.getElementById("screen4").style.zIndex = -5000;
     }  
         
-})
-
+});
+function toggleGrid(){
+    if( stringPropertyValue(document.getElementsByClassName("grid")[1],"display")=="block"){
+        for(let i = 0;i<=document.getElementsByClassName("grid").length;i++){
+            document.getElementsByClassName("grid")[i].style.display = "none";
+            document.getElementById("toggleMsg").textContent = "Grilla:OFF";
+            document.getElementById("toggle").style.backgroundColor = "green"
+            
+        }      
+    }else{
+        for(let i = 0;i<=document.getElementsByClassName("grid").length;i++){
+            document.getElementsByClassName("grid")[i].style.display = "block";
+            document.getElementById("toggleMsg").textContent = "Grilla:ON"
+            document.getElementById("toggle").style.backgroundColor = "red"
+        }
+    }
+}
 
