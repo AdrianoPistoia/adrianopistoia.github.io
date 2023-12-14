@@ -181,7 +181,7 @@ var player = {
 function turnOnTorchNumber (torchId){
     let target1 = document.getElementById("checkPoint"+torchId);
     target1.style.backgroundImage = "url('../icons/torch-stand-on.png')"
-    document.getElementById("screen"+torchId).style.animationName = "fade";
+    document.getElementById("screen"+torchId).setAttribute("style","animation-name: fade;");
 }
 
 function isPlayerNearTorch(idTorch){
@@ -200,17 +200,14 @@ function isPlayerNearTorch(idTorch){
 $(document).keydown(function (){
     if(isPlayerNearTorch(1)){
         turnOnTorchNumber(1);
-        document.getElementById("screen1").style.zIndex = -5000;
     }  
     if(isPlayerNearTorch(2)){
         turnOnTorchNumber(2);
-        document.getElementById("screen2").style.zIndex = -5000;
+        document.getElementById("screen4").style.animationName = "fade";
     }  
     if(isPlayerNearTorch(3)){
         turnOnTorchNumber(3);
-        document.getElementById("screen3").style.zIndex = -5000;
         document.getElementById("screen4").style.animationName = "fade";
-        document.getElementById("screen4").style.zIndex = -5000;
     }  
         
 });
@@ -230,4 +227,3 @@ function toggleGrid(){
         }
     }
 }
-

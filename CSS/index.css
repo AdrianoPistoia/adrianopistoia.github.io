@@ -537,9 +537,9 @@ div.row h3{
     width:                          100%;
     top:                            -50px;
 }
-.pabajo{
+/* .pabajo{
     z-index:                        -50000;
-}
+} */
 #screen1{
     animation-iteration-count:      1;
     animation-fill-mode:            forwards;
