@@ -182,6 +182,9 @@ function turnOnTorchNumber (torchId){
     let target1 = document.getElementById("checkPoint"+torchId);
     target1.style.backgroundImage = "url('../icons/torch-stand-on.png')"
     document.getElementById("screen"+torchId).setAttribute("style","animation-name: fade;");
+    setTimeout(function(){
+        document.getElementById("screen"+torchId).style.zIndex = "-99999"
+    },400)
 }
 
 function isPlayerNearTorch(idTorch){
